@@ -1,0 +1,116 @@
+:root {
+  --primary-color: rgb(228, 228, 228);
+  --secondary-color: rgb(241, 241, 241);
+  --terciary-color: rgb(144, 144, 144);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 img {
+  width: 100%;
+}
+
+main {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  width: 330px;
+  height: 55px;
+  background-color: var(--terciary-color);
+  color: black; /* var(--secondary-color); */
+  font-size: large;
+  border: 4px solid var(--primary-color);
+  border-radius: 10px;
+  transition: transform 0.8s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(105%);
+}
+
+#filter {
+  width: 330px;
+  margin: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#gallery {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 15px;
+}
+
+.card:hover {
+  transform: scale(105%);
+}
+
+.card {
+  max-width: 350px;
+  cursor: pointer;
+  transition: transform 0.8s ease;
+  height: auto;
+  display: grid;
+  justify-content: center;
+  margin: auto;
+  border: 2px solid var(--terciary-color);
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.516);
+}
+
+.images {
+  min-width: 300px;
+  width: 100%;
+}
+
+.articleDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  border-top: 3px solid var(--terciary-color);
+  border-bottom: 3px solid var(--terciary-color);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: larger;
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 1150px) {
+  main {
+    flex-direction: column;
+  }
+  #filter {
+    width: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+  }
+}
