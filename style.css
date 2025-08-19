@@ -88,14 +88,10 @@ button:hover {
   flex: 1;
 }
 
-.card:hover {
-  transform: scale(105%);
-}
-
 .card {
   max-width: 350px;
   cursor: pointer;
-  transition: transform 0.8s ease;
+  transition: transform 3s ease;
   height: auto;
   display: grid;
   justify-content: center;
@@ -105,6 +101,11 @@ button:hover {
   border-radius: 5px;
   box-shadow: 0 0 10px 4px rgba(128, 128, 128, 0.516);
   
+}
+
+.card:hover {
+  transform: scale(105%);
+  transition: transform 0.3s ease;
 }
 
 .images {
